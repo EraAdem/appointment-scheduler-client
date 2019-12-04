@@ -12,6 +12,7 @@ const AppointmentForm = (props) => {
           <Form.Group controlId="name">
             <Form.Label>Name</Form.Label>
             <Form.Control
+            required
               placeholder="Enter your name"
               value={appointment.name}
               name="name"
@@ -21,13 +22,47 @@ const AppointmentForm = (props) => {
           <Form.Group controlId="email">
             <Form.Label>Email</Form.Label>
             <Form.Control
+            required
               placeholder="Enter the email"
               value={appointment.email}
-              name="author"
+              name="email"
               onChange={handleChange}
             />
           </Form.Group>
-          
+          <Form.Group controlId="phone">
+            <Form.Label>Phone Number</Form.Label>
+            <Form.Control
+            required
+              placeholder="Enter the phone number"
+              value={appointment.phone}
+              name="phone"
+              onChange={handleChange}
+            />
+          </Form.Group>
+
+          <Form.Group controlId="date">
+            <Form.Label>Choose your available date for your appointment</Form.Label>
+            <Form.Control
+            required
+             type="date"
+              placeholder="Enter the date"
+              value={appointment.date}
+              name="date"
+              onChange={handleChange}
+            />
+          </Form.Group>
+          <Form.Group controlId="time">
+            <Form.Label>Choose your available time for your appointment</Form.Label>
+            <Form.Control
+            required
+             type="string"
+              placeholder="Enter the time"
+              value={appointment.time}
+              name="time"
+              onChange={handleChange}
+            />
+          </Form.Group>
+
           <Button type="submit" variant="primary">Submit</Button>
           <Button type="button" href={cancelPath} variant="secondary" className="ml-2">Cancel</Button>
         </Form>

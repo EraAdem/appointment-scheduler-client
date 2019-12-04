@@ -8,6 +8,10 @@ import SignUp from '../SignUp/SignUp'
 import SignIn from '../SignIn/SignIn'
 import SignOut from '../SignOut/SignOut'
 import ChangePassword from '../ChangePassword/ChangePassword'
+import Appointments from '../appointments/Appointments'
+import Appointment from '../appointments/Appointment'
+import AppointmentCreate from '../appointments/AppointmentCreate'
+import AppointmentEdit from '../appointments/AppointmentEdit'
 
 class App extends Component {
   constructor () {
@@ -53,6 +57,18 @@ class App extends Component {
           )} />
           <AuthenticatedRoute user={user} path='/change-password' render={() => (
             <ChangePassword alert={this.alert} user={user} />
+          )} />
+          <Route exact path='/appointments' render={() => (
+            <Appointments alert={this.alert} user={user} />
+          )} />
+          <Route exact path='/appointments/:id' render={() => (
+            <Appointment alert={this.alert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} path='/create-appointment' render={() => (
+            <AppointmentCreate alert={this.alert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} exact path='/appointments/:id/edit' render={() => (
+            <AppointmentEdit alert={this.alert} user={user} />
           )} />
         </main>
       </Fragment>

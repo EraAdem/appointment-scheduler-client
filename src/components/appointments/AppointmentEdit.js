@@ -6,7 +6,7 @@ import apiUrl from '../../apiConfig'
 import AppointmentForm from './AppointmentForm'
 
 const AppointmentEdit = (props) => {
-  const [appointment, setAppointment] = useState({ name: '', email: '', phone: '' , date: '', time: '' ,originalLanguage: '' })
+  const [appointment, setAppointment] = useState({ name: '', email: '', phone: '' , date: '', time: ''  })
   const [updated, setUpdated] = useState(false)
 
   useEffect(() => {
@@ -44,7 +44,7 @@ const AppointmentEdit = (props) => {
 
   return (
     <AppointmentForm
-      book={appointment}
+      appointment={appointment}
       handleChange={handleChange}
       handleSubmit={handleSubmit}
       cancelPath={`#appointments/${props.match.params.id}`}

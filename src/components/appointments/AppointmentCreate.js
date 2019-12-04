@@ -5,7 +5,7 @@ import apiUrl from '../../apiConfig'
 import AppointmentForm from './AppointmentForm'
 
 const AppointmentCreate = (props) => {
-  const [appointment, setAppointment] = useState({ name: '', email: '', phone: '', date: '',time: '', originalLanguage: '' })
+  const [appointment, setAppointment] = useState({ name: '', email: '', phone: '', date: '',time: '' })
 
   const handleChange = event => {
     event.persist()

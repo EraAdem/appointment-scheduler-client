@@ -12,6 +12,7 @@ import Appointments from '../appointments/Appointments'
 import Appointment from '../appointments/Appointment'
 import AppointmentCreate from '../appointments/AppointmentCreate'
 import AppointmentEdit from '../appointments/AppointmentEdit'
+// import Schedule from '../appointments/Schedule.jpg'
 
 class App extends Component {
   constructor () {
@@ -33,8 +34,16 @@ class App extends Component {
 
   render () {
     const { alerts, user } = this.state
+    let mainPageCss = ''
+
+    if (!user) {
+      mainPageCss = 'mainPage'
+    } else {
+      mainPageCss = ''
+    }
 
     return (
+      <div className = {mainPageCss}>
       <Fragment>
         <Header user={user} />
         {alerts.map((alert, index) => (
@@ -43,6 +52,7 @@ class App extends Component {
             heading={alert.heading}
             variant={alert.variant}
             message={alert.message}
+
           />
         ))}
         <main className="container">
@@ -71,7 +81,10 @@ class App extends Component {
             <AppointmentEdit alert={this.alert} user={user} />
           )} />
         </main>
+
       </Fragment>
+      </div>
+
     )
   }
 }

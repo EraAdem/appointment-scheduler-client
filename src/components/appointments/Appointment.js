@@ -6,7 +6,7 @@ import Button from 'react-bootstrap/Button'
 
 const Appointment= props => {
   const [appointment, setAppointment] = useState(null)
-//  const userId = props.user ? props.user._id : null
+  console.log(props)
 
   useEffect(() => {
     axios({

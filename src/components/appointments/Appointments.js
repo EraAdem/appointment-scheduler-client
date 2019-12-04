@@ -35,7 +35,7 @@ const Appointments = props => {
     <div className="row">
       <div className="col-sm-10 col-md-8 mx-auto mt-5">
         <div className="d-flex justify-content-between align-items-center">
-          <h1>Appointments</h1>
+          <h1 classname='scheduled-appointments'>Scheduled Appointments</h1>
           {props.user && <Link to="/create-appointment">Add an appointment</Link>}
         </div>
         <ListGroup>
@@ -43,6 +43,7 @@ const Appointments = props => {
         </ListGroup>
       </div>
     </div>
+
   )
 }
 

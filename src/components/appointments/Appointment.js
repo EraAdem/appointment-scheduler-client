@@ -44,12 +44,16 @@ const Appointment= props => {
   return (
     <div className="row">
       <div className="col-sm-10 col-md-8 mx-auto mt-5">
-        <h2>{appointment.name}</h2>
-        <h2>{appointment.email}</h2>
-        <h2>{appointment.phone}</h2>
-        <h2>{appointment.date}</h2>
-        <h2>{appointment.time}</h2>
+      <div className="contact">
+      <h2>Information for the scheduled appointment:</h2>
+        <h3>Name: {appointment.name}</h3>
+        <h3>Email: {appointment.email}</h3>
+        <h3>Phone: {appointment.phone}</h3>
+        <h3>Date: {appointment.date.split('T')[0]}</h3>
+        <h3>Time: {appointment.time}</h3>
+        </div>
           <Fragment>
+          <br></br>
             <Button href={`#appointments/${props.match.params.id}/edit`} variant="primary" className="mr-2">Update</Button>
             <Button onClick={handleDelete} variant="danger" className="mr-2">Delete</Button>
           </Fragment>

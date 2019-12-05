@@ -55,17 +55,17 @@ DELETE | /appointments/:id
 ## Images
 
 #### App Screenshot:
-![screenshot][Imgur](https://imgur.com/8zIX9Qy)
+![Screenshot](https://user-images.githubusercontent.com/54282250/70253453-3fe54000-1751-11ea-8072-29b877429ce1.png)
 
 ---
 
 #### Wireframe:
-![wireframe](https://imgur.com/txjctuA)
+![Wireframe](https://user-images.githubusercontent.com/54282250/70253539-660ae000-1751-11ea-951c-00156b189ea0.jpg)
 
 ---
 
 #### ERD:
-![ERD] 
+![ERD]
 
 ## [License](LICENSE)
 

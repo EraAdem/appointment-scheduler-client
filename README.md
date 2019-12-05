@@ -55,7 +55,7 @@ DELETE | /appointments/:id
 ## Images
 
 #### App Screenshot:
-![screenshot]([img]https://i.imgur.com/8zIX9Qy.png[/img])
+![screenshot][Imgur](https://imgur.com/8zIX9Qy)
 
 ---
 
@@ -65,7 +65,7 @@ DELETE | /appointments/:id
 ---
 
 #### ERD:
-![ERD] [/home/era/Downloads/ERD Appointment Scheduler)]
+![ERD] 
 
 ## [License](LICENSE)
 

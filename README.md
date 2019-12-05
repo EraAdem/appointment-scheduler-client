@@ -7,7 +7,7 @@
 
 ## Setup Steps
 
-1.  Fork and Clonethis repository.
+1.  Fork and Clone this repository.
 1.  Run `install command` to install all dependencies
 1.  Use `start command` to spin up the server.
 
@@ -65,7 +65,7 @@ DELETE | /appointments/:id
 ---
 
 #### ERD:
-![ERD](https://imgur.com/a/QSTTnp5)
+![ERD] [/home/era/Downloads/ERD Appointment Scheduler)]
 
 ## [License](LICENSE)
 

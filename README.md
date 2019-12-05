@@ -55,7 +55,7 @@ DELETE | /appointments/:id
 ## Images
 
 #### App Screenshot:
-![screenshot](https://imgur.com/8zIX9Qy)
+![screenshot]([img]https://i.imgur.com/8zIX9Qy.png[/img])
 
 ---
 

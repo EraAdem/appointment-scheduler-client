@@ -13,17 +13,27 @@
 
 ## Important Links
 
--   [Other Repo](www.link.com)
--   [Deployed API](www.link.com)
--   [Deployed Client](www.link.com)
+-   [Client Repo](https://github.com/EraAdem/appointment-scheduler-client)
+-   [API Repo](https://github.com/EraAdem/appointment-scheduler-api)
+-   [Deployed API](https://boiling-mesa-32189.herokuapp.com)
+-   [Deployed Client](https://github.com/EraAdem/appointment-scheduler-client)
 
 ## Planning Story
 
-Lorem ipsum dolor amet cloud bread letterpress squid actually, single-origin coffee williamsburg af poutine fingerstache austin semiotics paleo man braid vexillologist. Tumeric literally banjo pickled disrupt cold-pressed thundercats shoreditch try-hard health goth intelligentsia pop-up small batch skateboard farm-to-table. Meh tofu fam, direct trade tattooed stumptown etsy everyday carry activated charcoal. Neutra cornhole polaroid literally salvia, listicle tofu.
+The first step of the planning story was the decision to work with the express-api template
+for the backend and to work with react template for the client-side. I really wanted to have a SPA  built with React in my portfolio.  After creating user stories, drawing wireframes and ERD, I started working with backend part. This application is built with Express Api and MongoDB.I created resources, end points and tested  resource's end points with curl scripts. Next step was frontend part,using React(components) to connect user authorization to CRUD events. The last development step of the project was styling the application using Bootstrap.
 
 ### User Stories
 
 -   As a user I want to sign in/up
+-   As an unauthenticated user, I would like to sign up with email and password.
+-   As an authenticated user, I would like to sign in with email and password.
+-   As a signed in user, I would like to change password.
+-   As a signed in user, I would like to sign out.
+-   As a signed in user, I do not want to see sign-in/sign-up fields.
+-   As a non-authenticated user, I would not want to see change-password/sign-out fields.
+-   As a user, I would like forms to clear after submittal/failure.
+-   As a user, I would like success/failure messages when I have completed an auth action.
 -   As a user I want to Create a new appointment
 -   As a user I want to Read multiple appointments
 -   As a user I want to Read a single appointment
@@ -33,6 +43,7 @@ Lorem ipsum dolor amet cloud bread letterpress squid actually, single-origin cof
 ### Technologies Used
 
 -   REACT
+-   Node.js
 -   CSS
 -   Bootstrap
 
@@ -49,8 +60,8 @@ DELETE | /appointments/:id
 
 ### Unsolved Problems
 
--   Still need to ....
--   Would like to eventually ....
+-   Still need to work for the design of the application
+-   Would like to eventually work and to connect with a third API.
 
 ## Images
 
@@ -64,8 +75,6 @@ DELETE | /appointments/:id
 
 ---
 
-#### ERD:
-![ERD]
 
 ## [License](LICENSE)
 

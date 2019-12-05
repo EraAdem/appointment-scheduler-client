@@ -22,7 +22,7 @@ const Appointments = props => {
   }, [])
 
   const AppointmentsJsx = appointments.map(appointment => (
-    <ListGroup.Item 
+    <ListGroup.Item
       key={appointment._id}
       action
       href={`#appointments/${appointment._id}`}

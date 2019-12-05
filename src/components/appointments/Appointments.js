@@ -8,7 +8,7 @@ const Appointments = props => {
   const [appointments, setAppointments] = useState([])
 
   useEffect(() => {
-    console.log('props', props.user)
+    //console.log('props', props.user)
     axios({
       url: `${apiUrl}/appointments`,
       method: 'GET'
@@ -16,7 +16,7 @@ const Appointments = props => {
       .then(response => {
         setAppointments(response.data.appointments.reverse())
       })
-      .then(console.log('props', props))
+      //.then(console.log('props', props))
       .then(() => props.alert({ heading: 'Success', message: 'You got appointments', variant: 'success' }))
       .catch(() => props.alert({ heading: 'Not able to retrieve appointments', message: 'Sorry this isn\'t working', variant: 'success' }))
   }, [])

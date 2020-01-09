@@ -16,7 +16,11 @@ const Appointment= props => {
         'Authorization': `Bearer ${props.user.token}`
       }
     })
-      .then(res => setAppointment(res.data.appointment))
+      .then(res => {
+        setAppointment(res.data.appointment)
+        console.log('res', res)
+        console.log(props)
+      })
       .catch(() => props.alert({ heading: 'That didn\'t work', message: 'Couldn\'t retrieve the requested appointment', variant: 'danger' }))
   }, [])
 
@@ -40,7 +44,8 @@ const Appointment= props => {
   if (!appointment) {
     return <p>Loading stuff...</p>
   }
-
+if (appointment.owner === props.user._id) {
+  console.log("equal")
   return (
     <div className="row">
       <div className="col-sm-10 col-md-8 mx-auto mt-5">
@@ -62,6 +67,30 @@ const Appointment= props => {
       </div>
     </div>
   )
+} else {
+  return (
+    <div className="row">
+      <div className="col-sm-10 col-md-8 mx-auto mt-5">
+      <div className="contact">
+      <h2>Information for the scheduled appointment:</h2>
+        <h3>Name: {appointment.name}</h3>
+        <h3>Email: {appointment.email}</h3>
+        <h3>Phone: {appointment.phone}</h3>
+        <h3>Date: {appointment.date.split('T')[0]}</h3>
+        <h3>Time: {appointment.time}</h3>
+        </div>
+          <Fragment>
+          <br></br>
+
+          </Fragment>
+
+        <Button href="#/" variant="secondary">Back</Button>
+      </div>
+    </div>
+  )
+
+}
+
 }
 
 export default withRouter(Appointment)
